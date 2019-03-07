@@ -95,7 +95,7 @@ Import the reference to the generated SDK files inside your html file like:
 
     <!-- API Controllers -->
     <script src="scripts/APIMATICCalculatorV1Lib/Controllers/BaseController.js"></script>
-    <script src="scripts/APIMATICCalculatorV1Lib/Controllers/SimpleCalculator.js"></script>
+    <script src="scripts/APIMATICCalculatorV1Lib/Controllers/CalculatorEPs.js"></script>
 
 
     <!-- Models -->
@@ -168,26 +168,26 @@ var app = angular.module('myApp', [APIMATICCalculatorV1Lib]);
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [SimpleCalculator](#simple_calculator)
+* [CalculatorEPs](#calculator_e_ps)
 
-## <a name="simple_calculator"></a>![Class: ](https://apidocs.io/img/class.png ".SimpleCalculator") SimpleCalculator
+## <a name="calculator_e_ps"></a>![Class: ](https://apidocs.io/img/class.png ".CalculatorEPs") CalculatorEPs
 
 ### Get singleton instance
 
-The singleton instance of the ``` SimpleCalculator ``` class can be accessed via Dependency Injection.
+The singleton instance of the ``` CalculatorEPs ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, SimpleCalculator){
+	app.controller("testController", function($scope, CalculatorEPs){
 	});
 ```
 
-### <a name="calculate1"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculator.calculate1") calculate1
+### <a name="calculate"></a>![Method: ](https://apidocs.io/img/method.png ".CalculatorEPs.calculate") calculate
 
 > Calculates the expression using the specified operation..
 
 
 ```javascript
-function calculate1(operation, x, y)
+function calculate(operation, x, y)
 ```
 #### Parameters
 
@@ -204,13 +204,13 @@ function calculate1(operation, x, y)
 ```javascript
 
 
-	app.controller("testController", function($scope, SimpleCalculator){
+	app.controller("testController", function($scope, CalculatorEPs){
         var operation = new OperationType(MULTIPLY);
         var x = 4;
         var y = 5;
 
 
-		var result = SimpleCalculator.calculate1(operation, x, y);
+		var result = CalculatorEPs.calculate(operation, x, y);
         //Function call returns a promise
         result.then(function(success){
 			//success case

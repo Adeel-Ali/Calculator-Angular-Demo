@@ -205,8 +205,8 @@ function calculate(operation, x, y)
 
 
 	app.controller("testController", function($scope, SimpleCalculator){
-        var operation = new OperationType(SUBTRACT);
-        var x = 20;
+        var operation = new OperationType(MULTIPLY);
+        var x = 4;
         var y = 5;
 
 
